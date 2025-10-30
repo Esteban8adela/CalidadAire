@@ -3,12 +3,13 @@
   text-align: center;
   font-family: Arial, sans-serif;
   padding: 20px;
-  background-color: #f4f4f9;
+  background-color: #23232e;
   min-height: 100vh;
 }
 
 .App-header {
   margin-bottom: 30px;
+  color: white;
 }
 
 /* Estilos para la Tarjeta de Calidad del Aire 
@@ -51,17 +52,40 @@
   margin-top: 10px;
 }
 
-/* Clases de Color Dinámicas (Verde, Amarillo, Rojo)
-*/
+/* --- Clases de Color Dinámicas (Estándar AQI) --- */
+
+/* 0-55: Bueno */
 .quality-good {
-  background-color: #4CAF50; /* Verde */
+  background-color: #009966; /* Verde */
+  color: white;
 }
 
+/* 56-70: Moderado */
 .quality-moderate {
-  background-color: #FFC107; /* Amarillo */
-  color: #333; /* Texto oscuro para mejor lectura en amarillo */
+  background-color: #FFDE33; /* Amarillo */
+  color: #333; /* Texto oscuro para legibilidad */
 }
 
-.quality-bad {
-  background-color: #f44336; /* Rojo */
+/* 71-85: Nocivo (Grupos Sensibles) */
+.quality-unhealthy-sensitive {
+  background-color: #FF9933; /* Naranja */
+  color: white;
+}
+
+/* 86-105: Nocivo */
+.quality-unhealthy {
+  background-color: #ff4d00; /* Rojo */
+  color: white;
+}
+
+/* 106-200: Muy Nocivo */
+.quality-very-unhealthy {
+  background-color: #ff0000; /* Morado */
+  color: white;
+}
+
+/* 201+: Peligroso */
+.quality-hazardous {
+  background-color: #67007e; /* Marrón / Rojo Oscuro */
+  color: white;
 }
