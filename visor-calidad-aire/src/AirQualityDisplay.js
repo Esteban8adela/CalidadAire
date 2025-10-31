@@ -24,7 +24,7 @@ function AirQualityDisplay({ data }) {
 
   //para cuando carga por primera vez
   if (!data || data.aqi === null) {
-    return <p>Escribe una ciudad para ver la calidad del aire.</p>;
+    return <p></p>;
   }
 
   //valores dinamicos

@@ -99,6 +99,7 @@ function App() {
         </button>
       </div>
       
+      <p>Escribe una ciudad para ver la calidad del aire.</p>
       <p>O haz clic en el mapa para seleccionar una ubicación:</p>
 
       {/* mapa interactivo */}
