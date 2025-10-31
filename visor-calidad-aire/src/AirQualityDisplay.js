@@ -2,9 +2,7 @@ import React from 'react';
 
 function AirQualityDisplay({ data }) {
 
-  // --- LÓGICA DE NIVELES Y COLORES ACTUALIZADA ---
-
-  // Devuelve el *texto* del estado
+  // texto del estado
   const getStatusText = (aqi) => {
     if (aqi <= 55) return 'Bueno';
     if (aqi <= 70) return 'Moderado';
@@ -14,7 +12,7 @@ function AirQualityDisplay({ data }) {
     return 'Peligroso';
   };
 
-  // Devuelve la *clase CSS* para el color
+  //devuelve la clase del color
   const getQualityClass = (aqi) => {
     if (aqi <= 55) return 'quality-good';       // Verde
     if (aqi <= 70) return 'quality-moderate';   // Amarillo
@@ -24,18 +22,18 @@ function AirQualityDisplay({ data }) {
     return 'quality-hazardous';            // Morado
   };
 
-  // Si no hay datos (cuando la app carga por primera vez)
+  //para cuando carga por primera vez
   if (!data || data.aqi === null) {
     return <p>Escribe una ciudad para ver la calidad del aire.</p>;
   }
 
-  // Obtenemos los valores dinámicos
+  //valores dinamicos
   const qualityClass = getQualityClass(data.aqi);
   const statusText = getStatusText(data.aqi);
   const cityName = data.city || "Ubicación";
 
   return (
-    // Usamos la clase de color dinámica
+    //clase de color segun calidad
     <div className={`air-quality-card ${qualityClass}`}>
       <h2>Calidad del Aire en: {cityName}</h2>
       

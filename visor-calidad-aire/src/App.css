@@ -12,8 +12,7 @@
   color: white;
 }
 
-/* Estilos para la Tarjeta de Calidad del Aire 
-*/
+/* Estilos para la Tarjeta de Calidad del Aire */
 .air-quality-card {
   max-width: 300px;
   margin: 20px auto;
@@ -23,8 +22,7 @@
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-/* Estilos del "Medidor" Simple 
-*/
+/* Estilos del "Medidor" */
 .aqi-meter {
   display: flex;
   flex-direction: column;
@@ -86,6 +84,57 @@
 
 /* 201+: Peligroso */
 .quality-hazardous {
-  background-color: #67007e; /* Marrón / Rojo Oscuro */
+  background-color: #67007e; /* Rojo Oscuro */
   color: white;
+}
+
+/* --- Estilos del Buscador --- */
+.search-container {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.search-container input {
+  font-size: 1rem;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  width: 250px;
+}
+
+.search-container button {
+  font-size: 1rem;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #333;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.search-container button:hover {
+  background-color: #555;
+}
+
+.search-container button:disabled {
+  background-color: #999;
+  cursor: not-allowed;
+}
+
+.error-message {
+  color: #CC0033; /* Rojo */
+  font-weight: bold;
+}
+
+/* --- Estilos del Mapa --- */
+.leaflet-container {
+  height: 400px;
+  width: 80%;
+  max-width: 800px;
+  margin: 20px auto;
+  border-radius: 8px;
+  z-index: 1; /* Asegura que el mapa esté visible */
 }
